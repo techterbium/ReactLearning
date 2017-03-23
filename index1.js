@@ -53,32 +53,36 @@ var LightDisplay = React.createClass
                 color: "#999",
                 borderRadius: 50
              };
+            var textStyles =
+            {
+                  emphasis:
+                {
+                  fontSize: 38,
+                  ...commonStyle
+                },
+                smallEmphasis:
+                {
+                  ...commonStyle
+                },
+                small:
+                {
+                  fontSize: 17,
+                  opacity: 0.5,
+                  ...commonStyle
+                }
+            };
+            var commonStyle =
+            {
+                margin: 0,
+                padding: 0
+            };
 
-           var textStyles = {
-            emphasis: {
-              fontSize: 38,
-              ...commonStyle
-            },
-            smallEmphasis: {
-              ...commonStyle
-            },
-            small: {
-              fontSize: 17,
-              opacity: 0.5,
-              ...commonStyle
-            }
-          }
-         var commonStyle = {
-            margin: 0,
-            padding: 0
-          }
-
-            return(
+            return (
                 <div style={divStyle}>
                     <LightCounter />
-          <h2 style={textStyles.smallEmphasis}>LIGHTNING STRIKES</h2>
-          <h2 style={textStyles.emphasis}>WORLDWIDE</h2>
-          <p style={textStyles.small}>(since you loaded this example)</p>
+                      <h2 style={textStyles.smallEmphasis}>LIGHTNING STRIKES</h2>
+                      <h2 style={textStyles.emphasis}>WORLDWIDE</h2>
+                      <p style={textStyles.small}>(since you loaded this example)</p>
                 </div>
             );
         }
