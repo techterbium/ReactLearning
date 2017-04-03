@@ -58,9 +58,11 @@ var CounterDisplay = React.createClass({
     },
     increase: function(e)
     {
+        var incrementer;
+        incrementer = (e.shiftKey) ? 10: 1;
         this.setState(
             {
-                countNumber: this.state.countNumber + 1
+                countNumber: this.state.countNumber + incrementer
             }
         );
     }
